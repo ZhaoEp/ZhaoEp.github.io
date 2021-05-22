@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="《Git》"><meta name="keywords" content="git,tool"><meta name="author" content="ZEP"><meta name="copyright" content="ZEP"><title>《Git》 | Data Castle</title><link rel="shortcut icon" href="/img/icon/site.png"><link rel="stylesheet" href="/css/index.css?version=1.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.6.1"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git"><span class="toc-number">1.</span> <span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">1.1.</span> <span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pull"><span class="toc-number">1.1.1.</span> <span class="toc-text">pull</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#push"><span class="toc-number">1.1.2.</span> <span class="toc-text">push</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#config"><span class="toc-number">1.1.3.</span> <span class="toc-text">config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#branch"><span class="toc-number">1.1.4.</span> <span class="toc-text">branch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-number">1.1.5.</span> <span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">1.2.</span> <span class="toc-text">问题</span></a></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/icon/t3.png"></div><div class="author-info__name text-center">ZEP</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/frog1024">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">4</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">6</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(/img/top_background/jobs.png)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">Data Castle</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/abouts">About</a></span></div><div id="post-info"><div id="post-title">《Git》</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-05-21</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h3><p>将远程库中的更改合并到指定分支：<code>git pull origin next:master</code></p>
+<p>与当前分支合并：<code>git pull origin next</code></p>
+<p>存在 tracking 的分支合并：<code>git pull origin</code></p>
+<blockquote>
+<p>默认情况下，<code>git pull = git fetch + git merge FETCH_HEAD</code></p>
+<p>如果使用<code>--rebase</code> ，则 <code>git pull = git fetch + git rebase FETCH_HEAD</code></p>
+</blockquote>
+<a id="more"></a>
+
+
+
+<h3 id="push"><a href="#push" class="headerlink" title="push"></a>push</h3><p>将本地分支更新，推送到远端：<code>git push origin master</code></p>
+<blockquote>
+<p>如果<code>master</code>不存在，会新建。</p>
+</blockquote>
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><p>名字：<code>git config  user.name &quot;maxsu&quot;</code></p>
+<p>邮箱：<code>git config user.email &quot;yiibai.com@gmail.com&quot;</code></p>
+<p>配置远端仓库：<code>git remote add name git@github.com:yourName/repositoryname.git</code></p>
+<p>查看配置：<code>git config --list</code></p>
+<h3 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h3><p>创建分支：<code>git branch name</code></p>
+<p>显示远程和本地分支：<code>git branch -a</code></p>
+<p>切换分支：<code>git checkout name</code></p>
+<p>合并分支：<code>git merge name</code></p>
+<p>删除分支：<code>git branch --delete name</code></p>
+<p>建立tracking：<code>git branch --set-upstream-to=origin/&lt;branch&gt; master</code></p>
+<blockquote>
+<p><code>tracking</code>：在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系(tracking)。比如，在<code>git clone</code>的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的<code>master</code>分支自动”追踪”<code>origin/master</code>分支。 </p>
+</blockquote>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p><code>git diff</code>：用于显示提交和工作树等之间的更改</p>
+<p><code>git log</code>：显示提交日志</p>
+<p><code>git status</code>：显示索引文件和当前HEAD提交之间的差异，通常在<code>git commi</code>之前使用，检查文件状态。</p>
+<p><code>git stash</code>：用于将更改存储在脏工作目录中。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li>pull的时候出现：<code>fatal:refusing to merge unrelated histories</code></li>
+</ol>
+<p><img src="/2021/05/21/Git常用命令/git-pull.png" alt="git-pull"></p>
+<p>解决：<code>git pull github main --allow-unrelated-histories</code></p>
+<p><img src="/2021/05/21/Git常用命令/git-pull-solve.png" alt="git-pull-solve"></p>
+<ol start="2">
+<li>push的时候，出现：<code>failed to push some refs to ...</code></li>
+</ol>
+<p><img src="/2021/05/21/Git常用命令/git-push.png" alt="git-push"></p>
+<p>解决：提示的意思是，远端和当前分支不匹配，指定当前分支，远端会自动创建一个新的分支。或者将当前分支和远端分支进行手动的<code>tracking</code>：<code>git branch --set-upstream-to=github/main master</code></p>
+<p><img src="/2021/05/21/Git常用命令/git-push-solve.png" alt="git-push-solve"></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">ZEP</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://zepc.github.io/2021/05/21/Git常用命令/">http://zepc.github.io/2021/05/21/Git常用命令/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/git/">git</a><a class="post-meta__tags" href="/tags/tool/">tool</a></div><nav id="pagination"><div class="next-post pull-right"><a href="/2021/04/21/SQL基础教程/"><span>《SQL基础教程》</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(/img/top_background/jobs.png)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2021 By ZEP</div><div class="footer_custom_text">Hi, Welcome to my <a href="https://frog1024.github.io">blog</a>!</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.6.1"></script><script src="/js/fancybox.js?version=1.6.1"></script><script src="/js/sidebar.js?version=1.6.1"></script><script src="/js/copy.js?version=1.6.1"></script><script src="/js/fireworks.js?version=1.6.1"></script><script src="/js/transition.js?version=1.6.1"></script><script src="/js/scroll.js?version=1.6.1"></script><script src="/js/head.js?version=1.6.1"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+}</script></body></html>
